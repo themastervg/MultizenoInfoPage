@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MultiZeno is a powerful Discord bot with moderation, fun, and utility commands to enhance your server. Add it today!">
+    <meta name="keywords" content="Discord bot, MultiZeno, moderation, fun commands, utility bot, server management">
+    <meta name="author" content="MR. VG">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MultiZeno - Ultimate Discord Bot">
+    <meta property="og:description" content="Elevate your Discord server with MultiZeno's moderation, fun, and utility commands. Developed by MR. VG.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://multizenobot.pages.dev/img/icon.ico">
+    <meta property="og:url" content="https://multizenobot.pages.dev">
+    <title>MultiZeno - Ultimate Discord Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        .navbar {
+            backdrop-filter: blur(12px);
+            background: rgba(17, 24, 39, 0.7);
+        }
+        .command-tab {
+            transition: all 0.3s ease;
+            touch-action: manipulation;
+        }
+        .command-tab.active {
+            background: linear-gradient(90deg, #3b82f6, #a855f7);
+            color: white;
+            transform: scale(1.05);
+        }
+        .command-card {
+            background: rgba(31, 41, 55, 0.9);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .command-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+        }
+        .command-item {
+            transition: background-color 0.2s ease;
+        }
+        .command-item:hover {
+            background: rgba(59, 130, 246, 0.2);
+        }
+        .hero-animation {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .discord-btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .discord-btn:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        .discord-btn:hover:after {
+            left: 100%;
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        @media (max-width: 640px) {
+            .command-tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            .command-card {
+                padding: 1rem;
+            }
+            .command-item {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <nav class="navbar w-full py-4 px-4 sm:px-6 fixed top-0 z-20">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
+            <h1 class="text-2xl sm:text-3xl font-bold gradient-text">MultiZeno</h1>
+            <div class="flex flex-wrap gap-4 sm:gap-6 items-center mt-2 sm:mt-0">
+                <a href="index.html" class="text-gray-200 hover:text-blue-400 transition">Home</a>
+                <a href="privacy.html" class="text-gray-200 hover:text-blue-400 transition">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-200 hover:text-blue-400 transition">Terms of Service</a>
+                <a href="https://top.gg/bot/1183958042153332826" target="_blank" class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-full hover:from-blue-600 hover:to-purple-600 transition discord-btn">Vote</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4 hero-animation">
+        <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 gradient-text">MultiZeno: Power Up Your Discord</h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-8">A multi-purpose Discord bot with cutting-edge moderation, fun games, and utility tools to supercharge your server.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank" class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition discord-btn">Add to Discord</a>
+                <a href="#commands" class="border-2 border-blue-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-500 hover:text-white transition discord-btn">Explore Commands</a>
+                <a href="https://discord.gg/pcxQ4juQdG" target="_blank" class="border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-green-500 hover:text-white transition discord-btn">Support Server</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands" class="py-16 sm:py-20 bg-gray-900/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 gradient-text scroll-reveal">Command Center</h2>
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 scroll-reveal">
+                <button class="command-tab px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-lg font-semibold bg-gray-700 text-gray-200 active" onclick="showTab('community', event)">Community</button>
+                <button class="command-tab px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-lg font-semibold bg-gray-700 text-gray-200" onclick="showTab('moderation', event)">Moderation</button>
+            </div>
+            <div id="community" class="command-content">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    <div class="command-card p-4 sm:p-6 rounded-xl scroll-reveal">
+                        <ul class="space-y-2 sm:space-y-3">
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/8ball</span> - Ask the Magic 8-Ball for fun answers.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/avatar</span> - Display a user's avatar.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/coinflip</span> - Flip a coin: heads or tails?</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/help</span> - View all commands with categories.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/invites</span> - Manage server invites.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/membercount</span> - Show server member stats.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/permissions</span> - Check user permissions.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/randomfact</span> - Get a random fact in English or Hindi.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/rick-roll</span> - Surprise a member with a Rickroll!</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/rock-paper</span> - Play Rock-Paper-Scissors.</li>
+                        </ul>
+                    </div>
+                    <div class="command-card p-4 sm:p-6 rounded-xl scroll-reveal">
+                        <ul class="space-y-2 sm:space-y-3">
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/roll</span> - Roll dice (e.g., 2d6).</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/serverinfo</span> - Display server details.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/stats</span> - Check bot stats.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/tic-tac-toe</span> - Play Tic-Tac-Toe.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/trivia</span> - Start a trivia game.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/fast-typing-test</span> - Compete in a typing challenge.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/userinfo</span> - Get user information.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/vote</span> - Support MultiZeno on Top.gg!</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/vouch</span> - Manage server vouch system.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/wiki</span> - Search Wikipedia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="moderation" class="command-content hidden">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    <div class="command-card p-4 sm:p-6 rounded-xl scroll-reveal">
+                        <ul class="space-y-2 sm:space-y-3">
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/addrole</span> - Assign a role to a user.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/automod</span> - Configure auto-moderation.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/ban</span> - Ban a member.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/create-embed</span> - Build embeds with buttons.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/custom</span> - Manage custom commands.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/dm</span> - Send a DM via the bot.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/emoji-steal</span> - Add an emoji to the server.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/kick</span> - Kick a member.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/lock</span> - Lock a channel.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/nick</span> - Change a user's nickname.</li>
+                        </ul>
+                    </div>
+                    <div class="command-card p-4 sm:p-6 rounded-xl scroll-reveal">
+                        <ul class="space-y-2 sm:space-y-3">
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/poll</span> - Create a poll with up to 5 options.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/purge</span> - Clear messages in a channel.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/removerole</span> - Remove a role from a user.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/say</span> - Send a message via the bot.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/slowmode</span> - Set slowmode for a channel.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/timeout</span> - Temporarily mute a user.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/unban</span> - Lift a ban from a user.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/unlock</span> - Unlock a channel.</li>
+                            <li class="command-item p-2 sm:p-3 rounded-lg"><span class="font-semibold text-blue-400">/welcome</span> - Manage welcome messages.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 sm:py-20 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center scroll-reveal">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 gradient-text">About MultiZeno</h2>
+            <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-6">Developed by <span class="font-semibold text-blue-400">MR. VG</span>, MultiZeno is a next-gen Discord bot designed to empower your server with robust moderation, engaging games, and versatile utilities. Its sleek interface and constant updates make it ideal for any community.</p>
+            <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-8">Join thousands of servers using MultiZeno to create vibrant, well-managed communities. Add it today and experience the future of Discord bots!</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank" class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition discord-btn">Add to Discord</a>
+                <a href="https://discord.gg/pcxQ4juQdG" target="_blank" class="border-2 border-green-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-green-500 hover:text-white transition discord-btn">Support Server</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-6 sm:py-8 text-center">
+        <p class="text-gray-300">Developed by <span class="font-semibold text-blue-400">MR. VG</span></p>
+        <p class="text-gray-400 mt-2">© 2025 MultiZeno. All rights reserved.</p>
+        <div class="mt-4 flex justify-center gap-6">
+            <a href="privacy.html" class="text-gray-400 hover:text-blue-400 transition">Privacy Policy</a>
+            <a href="terms.html" class="text-gray-400 hover:text-blue-400 transition">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabId, event) {
+            document.querySelectorAll('.command-content').forEach(content => content.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+            document.querySelectorAll('.command-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        const scrollReveals = document.querySelectorAll('.scroll-reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        scrollReveals.forEach(el => observer.observe(el));
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
