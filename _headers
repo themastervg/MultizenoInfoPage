@@ -1,0 +1,8 @@
+/assets/commands.json
+  Cache-Control: no-store
+
+/assets/status.js
+  Cache-Control: no-store
+
+/assets/global.css
+  Cache-Control: public, max-age=604800, immutable
