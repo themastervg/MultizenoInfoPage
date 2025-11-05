@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MultiZeno • Power Up Your Discord</title>
-  <meta name="description" content="MultiZeno is a multipurpose Discord bot with moderation, utility, games, and advanced features for your server.">
-  <link rel="icon" href="/favicon-32x32.png">
-  <link rel="stylesheet" href="/assets/global.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MultiZeno • Power Up Your Discord</title>
+<meta name="description" content="MultiZeno is a multipurpose Discord bot with moderation, utilities, games and a sleek user experience for your server.">
+<link rel="canonical" href="https://multizeno.xyz/">
+<meta name="theme-color" content="#3b82f6">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="MultiZeno • Power Up Your Discord">
+<meta property="og:description" content="Moderation, utilities, games and more. Add MultiZeno to your server.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://multizeno.xyz/assets/logo-512.png">
+<meta property="og:url" content="https://multizeno.xyz/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/assets/logo-512.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/global.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MultiZeno","applicationCategory":"CommunicationApplication","operatingSystem":"All","url":"https://multizeno.xyz/","publisher":{"@type":"Organization","name":"MR. VG"}}</script>
 </head>
 <body>
 <header class="navbar">
@@ -17,10 +29,9 @@
       <a href="/faq.html">FAQ</a>
       <a href="/changelog.html">Changelog</a>
       <a href="/team.html">Team</a>
-      <a href="/status.html">Status</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
-      <a class="btn btn-primary" target="_blank" href="https://top.gg/bot/1183958042153332826">Vote</a>
+      <a class="btn btn-primary" target="_blank" href="https://discord.com/oauth2/authorize?client_id=1183958042153332826">Add</a>
     </nav>
   </div>
 </header>
@@ -28,11 +39,11 @@
 <section class="hero container">
   <div class="reveal in">
     <h1>Power Up Your Discord</h1>
-    <p>A multipurpose Discord bot built for moderation, automation, fun games, utility commands, and more.</p>
+    <p>Moderation, utilities, games, automations and more. MultiZeno makes your server fast, safe and fun.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank">Add to Discord</a>
+      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank" rel="nofollow noopener">Add to Discord</a>
       <a class="btn btn-outline" href="#commands">Explore Commands</a>
-      <a class="btn btn-ghost" href="https://discord.gg/pcxQ4juQdG" target="_blank">Support Server</a>
+      <a class="btn btn-ghost" href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener">Support Server</a>
     </div>
   </div>
 </section>
@@ -46,9 +57,7 @@
       <button class="tab" aria-selected="true" data-cat="All">All</button>
     </div>
     <div class="toolbar">
-      <div class="search">
-        <input type="text" id="search" placeholder="Search commands...">
-      </div>
+      <div class="search"><input id="search" type="text" placeholder="Search commands..."></div>
       <span id="count" class="badge">0 commands</span>
     </div>
     <div id="loader" class="loader"></div>
@@ -56,15 +65,25 @@
   </div>
 </section>
 
-<section id="about" class="section">
+<section class="section">
   <div class="container">
-    <h2>About MultiZeno</h2>
-    <p class="desc" style="text-align:center;max-width:700px;margin:0 auto;">
-      Developed by <strong>MR. VG</strong>, MultiZeno is designed to enhance Discord communities with powerful moderation, fun features, and smooth performance.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank">Add to Discord</a>
-      <a class="btn btn-ghost" href="https://discord.gg/pcxQ4juQdG" target="_blank">Support Server</a>
+    <h2>Why MultiZeno</h2>
+    <div class="grid">
+      <div class="card reveal">
+        <div class="badge">Performance</div>
+        <div class="cmd" style="margin-top:6px">Fast and reliable</div>
+        <div class="desc">Optimized slash commands and low latency responses.</div>
+      </div>
+      <div class="card reveal">
+        <div class="badge">Moderation</div>
+        <div class="cmd" style="margin-top:6px">Powerful tools</div>
+        <div class="desc">Automod, timeout, locks, purge, polls and more.</div>
+      </div>
+      <div class="card reveal">
+        <div class="badge">Fun</div>
+        <div class="cmd" style="margin-top:6px">Games and utilities</div>
+        <div class="desc">Trivia, tic-tac-toe, facts, calculators, wiki and more.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -72,7 +91,7 @@
 <footer class="footer">
   <div class="container">
     <div>Developed by <strong>MR. VG</strong></div>
-    <div style="margin-top:6px;">© 2025 MultiZeno. All rights reserved.</div>
+    <div style="margin-top:6px">© 2025 MultiZeno. All rights reserved.</div>
   </div>
 </footer>
 

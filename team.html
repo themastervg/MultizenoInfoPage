@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MultiZeno - Team</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MultiZeno • Team</title>
+<meta name="description" content="Meet the developer and contributors behind MultiZeno.">
+<link rel="icon" href="/favicon-32x32.png">
 <link rel="stylesheet" href="/assets/global.css">
 </head>
 <body>
-<!-- Navbar -->
 <header class="navbar">
   <div class="container nav-inner">
-    <a href="/" class="brand">MultiZeno</a>
+    <a class="brand" href="/">MultiZeno</a>
     <nav class="nav-links">
       <a href="/">Home</a>
       <a href="/faq.html">FAQ</a>
       <a href="/changelog.html">Changelog</a>
       <a href="/team.html" aria-current="page">Team</a>
-      <a href="/status.html">Status</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
     </nav>
   </div>
 </header>
 
-<main class="section section-dark" style="padding-top:6rem">
-  <div class="container" style="max-width:900px; text-align:center;">
+<main class="section section-dark" style="padding-top:6.5rem">
+  <div class="container" style="max-width:1000px">
     <h1 class="page-title">Team</h1>
-
     <div class="grid">
-      <div class="card">
+      <div class="card reveal" style="align-items:center">
         <div>
           <div class="badge">Lead Developer</div>
           <div class="cmd" style="margin-top:6px">MR. VG</div>
-          <div class="desc">Creator of MultiZeno, working on moderation, utility, UI/UX and security features.</div>
+          <div class="desc">Creator and maintainer of MultiZeno. Focus on moderation, utilities, UX and performance.</div>
         </div>
-        <a href="https://discord.gg/pcxQ4juQdG" target="_blank" class="btn btn-primary">Contact</a>
+        <div class="copy" style="display:flex;gap:8px">
+          <a class="btn btn-primary" href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener">Contact</a>
+          <a class="btn btn-outline" href="https://top.gg/bot/1183958042153332826" target="_blank" rel="nofollow noopener">Support</a>
+        </div>
       </div>
-
-      <div class="card">
+      <div class="card reveal" style="align-items:center">
         <div>
-          <div class="badge">Community Helpers</div>
-          <div class="cmd">Supporters & Testers</div>
-          <div class="desc">Amazing users who helped in bug reports, ideas and testing features.</div>
+          <div class="badge">Contributors</div>
+          <div class="cmd" style="margin-top:6px">Community</div>
+          <div class="desc">Thanks to testers, bug reporters and idea contributors from the support server.</div>
         </div>
-        <a href="https://top.gg/bot/1183958042153332826" target="_blank" class="btn btn-outline">Support Bot</a>
+        <div class="copy"><a class="btn btn-primary" href="https://discord.gg/pcxQ4juQdG" target="_blank">Join Server</a></div>
       </div>
     </div>
   </div>
@@ -51,13 +52,20 @@
 
 <footer class="footer">
   <div class="container">
-    <p>Developed by <b>MR. VG</b></p>
-    <p>© 2025 MultiZeno. All rights reserved.</p>
+    <div>Developed by <strong>MR. VG</strong></div>
+    <div style="margin-top:6px">© 2025 MultiZeno. All rights reserved.</div>
   </div>
 </footer>
 
 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">☀</button>
-<a href="https://discord.gg/pcxQ4juQdG" target="_blank" class="support-btn">💬</a>
+<a href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener" class="support-btn" aria-label="Join support server">💬</a>
 <script src="/assets/theme.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var els=document.querySelectorAll('.reveal');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  els.forEach(function(el){io.observe(el)});
+});
+</script>
 </body>
 </html>

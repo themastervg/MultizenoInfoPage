@@ -13,7 +13,7 @@
   { "category": "Community", "emoji": "🎲", "command": "/roll", "description": "Roll dice (e.g., 2d6 for two 6-sided dice)" },
   { "category": "Community", "emoji": "🏰", "command": "/serverinfo", "description": "Displays information about the server" },
   { "category": "Community", "emoji": "📊", "command": "/stats", "description": "Check bot stats" },
-  { "category": "Community", "emoji": "❌⭕", "command": "/tic-tac-toe", "description": "Play a game of Tic Tac Toe on Discord" },
+  { "category": "Community", "emoji": "❌⭕", "command": "/tic-tac-toe", "description": "Play Tic Tac Toe on Discord" },
   { "category": "Community", "emoji": "🧠", "command": "/trivia", "description": "Starts a trivia game" },
   { "category": "Community", "emoji": "⌨️", "command": "/fast-typing-test", "description": "Starts a fast-type challenge" },
   { "category": "Community", "emoji": "👤", "command": "/userinfo", "description": "Get information about a user" },

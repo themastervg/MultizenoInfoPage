@@ -1,0 +1,11 @@
+{
+  "name": "MultiZeno",
+  "short_name": "MultiZeno",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#3b82f6",
+  "icons": [
+    { "src": "/assets/logo-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

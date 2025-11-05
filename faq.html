@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MultiZeno - FAQ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MultiZeno • FAQ</title>
+<meta name="description" content="Frequently asked questions about the MultiZeno Discord bot.">
+<link rel="canonical" href="https://multizeno.xyz/faq.html">
+<link rel="icon" href="/favicon-32x32.png">
 <link rel="stylesheet" href="/assets/global.css">
 </head>
 <body>
 <header class="navbar">
   <div class="container nav-inner">
-    <a href="/" class="brand">MultiZeno</a>
+    <a class="brand" href="/">MultiZeno</a>
     <nav class="nav-links">
       <a href="/">Home</a>
       <a href="/faq.html" aria-current="page">FAQ</a>
       <a href="/changelog.html">Changelog</a>
       <a href="/team.html">Team</a>
-      <a href="/status.html">Status</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
     </nav>
@@ -25,79 +27,25 @@
 <main class="section section-dark" style="padding-top:6.5rem">
   <div class="container" style="max-width:900px">
     <h1 class="page-title">Frequently Asked Questions</h1>
-
-    <div class="card" style="padding: 2rem;">
-      
-      <details class="faq-item">
-        <summary>❓ How do I invite MultiZeno to my server?</summary>
-        <p>Click the "Add to Discord" button on the homepage or use the official OAuth2 invite link.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>⚙️ Why isn't the bot responding to commands?</summary>
-        <p>Make sure the bot has the correct permissions and slash commands are enabled for your server.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>📜 How do I see all available commands?</summary>
-        <p>Use the <b>/help</b> command or visit the Command Center on the homepage.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>🔒 Does MultiZeno store personal user data?</summary>
-        <p>No, MultiZeno does not permanently store personal data. More info is available in the Privacy Policy.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>🐞 How can I report bugs or request new features?</summary>
-        <p>Join our Discord support server and open a support ticket. We appreciate feedback!</p>
-      </details>
-
+    <div class="card" style="padding: 1.25rem">
+      <details class="faq-item"><summary>How do I invite MultiZeno?</summary><p>Use the Add button on the homepage and select your server.</p></details>
+      <details class="faq-item"><summary>Why is the bot not responding?</summary><p>Check permissions in the channel and confirm the bot is online on the Status page.</p></details>
+      <details class="faq-item"><summary>How do I see all commands?</summary><p>Use /help or the Command Center on the homepage.</p></details>
+      <details class="faq-item"><summary>Do you store personal data?</summary><p>No, see Privacy Policy for details.</p></details>
+      <details class="faq-item"><summary>How can I report a bug or request a feature?</summary><p>Join the support server and open a ticket.</p></details>
     </div>
   </div>
 </main>
 
 <footer class="footer">
   <div class="container">
-    <p>Developed by <b>MR. VG</b></p>
-    <p>© 2025 MultiZeno. All Rights Reserved.</p>
+    <div>Developed by <strong>MR. VG</strong></div>
+    <div style="margin-top:6px">© 2025 MultiZeno. All rights reserved.</div>
   </div>
 </footer>
 
 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">☀</button>
-<a href="https://discord.gg/pcxQ4juQdG" class="support-btn" target="_blank">💬</a>
+<a href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener" class="support-btn" aria-label="Join support server">💬</a>
 <script src="/assets/theme.js"></script>
-
-<style>
-.page-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(90deg,#3b82f6,#a855f7);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.faq-item {
-  background: rgba(255,255,255,0.03);
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.faq-item[open] {
-  background: rgba(255,255,255,0.06);
-}
-.faq-item summary {
-  font-weight: 600;
-  font-size: 1rem;
-}
-.faq-item p {
-  margin-top: 0.5rem;
-  color: #d1d5db;
-}
-</style>
 </body>
 </html>
