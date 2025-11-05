@@ -27,23 +27,29 @@
 <main class="section section-dark" style="padding-top:6.5rem">
   <div class="container" style="max-width:900px">
     <h1 style="text-align:center;background:linear-gradient(90deg,#3b82f6,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0 0 1rem;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800">Changelog</h1>
-    <div class="card" style="display:block">
-      <section class="reveal" style="margin-bottom:16px">
-        <div class="badge">2025-11-05</div>
-        <h3 style="margin:6px 0 4px;font-weight:800">Phase 1 UI/UX</h3>
-        <ul class="desc" style="margin:0 0 6px 18px">
-          <li>Dark/Light mode toggle</li>
-          <li>Command Center powered by JSON</li>
-          <li>Search, category filters, copy button</li>
-        </ul>
-      </section>
-      <section class="reveal" style="margin-bottom:16px">
+
+    <div class="toolbar" style="justify-content:flex-end">
+      <span class="badge" id="releaseCount">0 releases</span>
+    </div>
+
+    <div class="card" id="logWrap" style="display:block">
+      <section class="reveal" data-date="2025-11-06">
         <div class="badge">2025-11-06</div>
         <h3 style="margin:6px 0 4px;font-weight:800">Phase 3 Polish</h3>
         <ul class="desc" style="margin:0 0 6px 18px">
           <li>Animated cards and scroll reveal</li>
           <li>Floating support button</li>
           <li>Loading spinner for commands</li>
+        </ul>
+      </section>
+
+      <section class="reveal" data-date="2025-11-05">
+        <div class="badge">2025-11-05</div>
+        <h3 style="margin:6px 0 4px;font-weight:800">Phase 1 UI/UX</h3>
+        <ul class="desc" style="margin:0 0 6px 18px">
+          <li>Dark/Light mode toggle</li>
+          <li>Command Center powered by JSON</li>
+          <li>Search, category filters, copy button</li>
         </ul>
       </section>
     </div>
@@ -60,5 +66,18 @@
 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">☀</button>
 <a href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener" class="support-btn" aria-label="Join support server">💬</a>
 <script src="/assets/theme.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const secs=[...document.querySelectorAll('#logWrap section')];
+  secs.sort((a,b)=>new Date(b.dataset.date)-new Date(a.dataset.date));
+  const wrap=document.getElementById('logWrap');
+  wrap.innerHTML='';
+  secs.forEach(s=>wrap.appendChild(s));
+  const c=document.getElementById('releaseCount');
+  c.textContent=secs.length+' releases';
+  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  secs.forEach(s=>io.observe(s));
+});
+</script>
 </body>
 </html>
