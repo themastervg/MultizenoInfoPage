@@ -13,14 +13,17 @@
 <header class="navbar">
   <div class="container nav-inner">
     <a class="brand" href="/">MultiZeno</a>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/changelog.html" aria-current="page">Changelog</a>
-      <a href="/team.html">Team</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-    </nav>
+    <div class="nav-right">
+      <button id="menuToggle" class="hamburger" aria-label="Menu">☰</button>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/changelog.html" aria-current="page">Changelog</a>
+        <a href="/team.html">Team</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -31,13 +34,13 @@
     <div class="card" id="logWrap" style="display:block">
       <section class="reveal" data-date="2025-11-06">
         <div class="badge">2025-11-06</div>
-        <h3 style="margin:6px 0 4px;font-weight:800">Phase 3 Polish</h3>
-        <ul class="desc" style="margin:0 0 6px 18px"><li>Animated cards and scroll reveal</li><li>Floating support button</li><li>Loading spinner for commands</li></ul>
+        <h3 style="margin:6px 0 4px;font-weight:800">Polish & Animations</h3>
+        <ul class="desc" style="margin:0 0 6px 18px"><li>Animated cards and scroll reveal</li><li>Mobile menu with hamburger</li><li>Improved glass UI</li></ul>
       </section>
       <section class="reveal" data-date="2025-11-05">
         <div class="badge">2025-11-05</div>
-        <h3 style="margin:6px 0 4px;font-weight:800">Phase 1 UI/UX</h3>
-        <ul class="desc" style="margin:0 0 6px 18px"><li>Dark/Light mode toggle</li><li>JSON Command Center</li><li>Search, categories, copy button</li></ul>
+        <h3 style="margin:6px 0 4px;font-weight:800">Core Launch</h3>
+        <ul class="desc" style="margin:0 0 6px 18px"><li>Dark/Light mode</li><li>JSON Command Center</li><li>SEO base and pages</li></ul>
       </section>
     </div>
   </div>
@@ -54,7 +57,15 @@
 <a href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener" class="support-btn" aria-label="Join support server">💬</a>
 <script src="/assets/theme.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded',function(){var s=[...document.querySelectorAll('#logWrap section')];s.sort((a,b)=>new Date(b.dataset.date)-new Date(a.dataset.date));var w=document.getElementById('logWrap');w.innerHTML='';s.forEach(e=>w.appendChild(e));document.getElementById('releaseCount').textContent=s.length+' releases';var io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});s.forEach(e=>io.observe(e))});
+document.addEventListener('DOMContentLoaded',function(){
+  var s=[...document.querySelectorAll('#logWrap section')];
+  s.sort((a,b)=>new Date(b.dataset.date)-new Date(a.dataset.date));
+  var w=document.getElementById('logWrap');w.innerHTML='';
+  s.forEach(e=>w.appendChild(e));
+  document.getElementById('releaseCount').textContent=s.length+' releases';
+  var io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  s.forEach(e=>io.observe(e));
+});
 </script>
 </body>
 </html>

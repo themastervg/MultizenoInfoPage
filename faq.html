@@ -8,31 +8,50 @@
 <link rel="canonical" href="https://multizeno.xyz/faq.html">
 <link rel="icon" href="/favicon-32x32.png">
 <link rel="stylesheet" href="/assets/global.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I invite MultiZeno?","acceptedAnswer":{"@type":"Answer","text":"Use the Add to Discord button on the homepage and select your server."}},{"@type":"Question","name":"Why is the bot not responding?","acceptedAnswer":{"@type":"Answer","text":"Check channel permissions and confirm the bot is online. Retry the command."}},{"@type":"Question","name":"How do I see all commands?","acceptedAnswer":{"@type":"Answer","text":"Use /help in Discord or browse the Command Center on the homepage."}},{"@type":"Question","name":"Do you store personal data?","acceptedAnswer":{"@type":"Answer","text":"No personal data is stored permanently. See the Privacy page for details."}},{"@type":"Question","name":"How can I report a bug or request a feature?","acceptedAnswer":{"@type":"Answer","text":"Join the support server and open a ticket."}}]}</script>
 </head>
 <body>
 <header class="navbar">
   <div class="container nav-inner">
     <a class="brand" href="/">MultiZeno</a>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/faq.html" aria-current="page">FAQ</a>
-      <a href="/changelog.html">Changelog</a>
-      <a href="/team.html">Team</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-    </nav>
+    <div class="nav-right">
+      <button id="menuToggle" class="hamburger" aria-label="Menu">☰</button>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/faq.html" aria-current="page">FAQ</a>
+        <a href="/changelog.html">Changelog</a>
+        <a href="/team.html">Team</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </div>
   </div>
 </header>
 
 <main class="section section-dark" style="padding-top:6.5rem">
-  <div class="container" style="max-width:900px">
+  <div class="container faq">
     <h1 class="page-title">Frequently Asked Questions</h1>
-    <div class="card" style="padding: 1.25rem">
-      <details class="faq-item"><summary>How do I invite MultiZeno?</summary><p>Use the Add button on the homepage and select your server.</p></details>
-      <details class="faq-item"><summary>Why is the bot not responding?</summary><p>Check permissions in the channel and confirm the bot is online on the Status page.</p></details>
-      <details class="faq-item"><summary>How do I see all commands?</summary><p>Use /help or the Command Center on the homepage.</p></details>
-      <details class="faq-item"><summary>Do you store personal data?</summary><p>No, see Privacy Policy for details.</p></details>
-      <details class="faq-item"><summary>How can I report a bug or request a feature?</summary><p>Join the support server and open a ticket.</p></details>
+    <div class="card" style="display:block;padding:14px">
+      <div class="faq-item reveal">
+        <div class="faq-summary">❓ How do I invite MultiZeno?</div>
+        <div class="faq-content"><p class="desc">Use the Add to Discord button on the homepage and select your server.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-summary">⚙️ Why is the bot not responding?</div>
+        <div class="faq-content"><p class="desc">Check channel permissions and confirm the bot is online. Retry the command.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-summary">📜 How do I see all commands?</div>
+        <div class="faq-content"><p class="desc">Use /help in Discord or browse the Command Center on the homepage.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-summary">🔒 Do you store personal data?</div>
+        <div class="faq-content"><p class="desc">No personal data is stored permanently. See the Privacy page for details.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-summary">🐞 How can I report a bug or request a feature?</div>
+        <div class="faq-content"><p class="desc">Join the support server and open a ticket.</p></div>
+      </div>
     </div>
   </div>
 </main>
