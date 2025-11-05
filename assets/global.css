@@ -1,0 +1,43 @@
+:root{--bg-start:#0b1220;--bg-end:#12152a;--card:#101728;--muted:#9aa4b2;--brand1:#3b82f6;--brand2:#a855f7;--success:#22c55e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:radial-gradient(1200px 800px at 10% -20%,#1e2750 0%,transparent 60%),linear-gradient(135deg,var(--bg-start),var(--bg-end));color:#e5e7eb;overflow-x:hidden}
+.container{max-width:1120px;margin:0 auto;padding:0 1rem}
+.navbar{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(12px);background:rgba(10,12,23,.55);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.brand{font-weight:800;font-size:1.5rem;background:linear-gradient(90deg,var(--brand1),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:1rem;align-items:center}
+.nav-links a{color:#d4d7dd;text-decoration:none;font-weight:500;padding:.55rem .9rem;border-radius:999px}
+.nav-links a:hover{background:rgba(255,255,255,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:700;text-decoration:none;transition:.25s;white-space:nowrap}
+.btn-primary{background:linear-gradient(90deg,var(--brand1),var(--brand2));color:#fff;padding:.75rem 1.1rem}
+.btn-outline{border:2px solid var(--brand1);color:#fff;padding:.7rem 1.05rem}
+.btn-ghost{border:2px solid #22c55e;color:#fff;padding:.7rem 1.05rem}
+.btn:hover{transform:translateY(-1px)}
+.hero{min-height:92vh;display:grid;place-items:center;padding-top:84px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:0 0 1rem}
+.hero p{max-width:780px;margin:0 auto 1.25rem;color:#c6cbd4;font-size:clamp(1rem,2.3vw,1.15rem)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:.5rem}
+.section{padding:4rem 0}
+.section-dark{background:rgba(255,255,255,.02)}
+.section h2{font-size:clamp(1.6rem,3.5vw,2.4rem);text-align:center;margin:0 0 1.25rem;background:linear-gradient(90deg,var(--brand1),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tabs{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:1rem 0 1.25rem}
+.tab{background:#1a2236;color:#cfd5df;border:1px solid rgba(255,255,255,.08);padding:.55rem .9rem;border-radius:999px;font-weight:600;cursor:pointer;transition:.2s}
+.tab[aria-selected="true"]{background:linear-gradient(90deg,var(--brand1),var(--brand2));color:#fff}
+.toolbar{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.25rem}
+.search{flex:1 1 360px;max-width:620px;display:flex;align-items:center;background:#0f1630;border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:.6rem .8rem}
+.search input{all:unset;color:#e7ebf1;width:100%;font-size:1rem}
+.grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:12px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{background:linear-gradient(180deg,rgba(20,28,46,.92),rgba(14,19,35,.92));border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:16px;transition:.25s;display:flex;gap:12px}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.35)}
+.cmd{font-weight:800;color:var(--brand1)}
+.desc{color:#b9c0cc}
+.badge{background:rgba(59,130,246,.15);color:#b9d4ff;border:1px solid rgba(59,130,246,.35);padding:.18rem .5rem;border-radius:999px;font-size:.75rem;font-weight:700}
+.copy{margin-left:auto}
+.copy button{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#e5e7eb;border-radius:10px;padding:.45rem .6rem;font-weight:700;cursor:pointer}
+.copy button:hover{background:rgba(255,255,255,.12)}
+.footer{padding:2rem 0;text-align:center;background:#0a0e1a;border-top:1px solid rgba(255,255,255,.06);color:#a9b0bb}
+.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:.8rem;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);padding:.1rem .35rem;border-radius:6px;color:#e5e7eb}
+.reveal{opacity:0;transform:translateY(18px);transition:.5s}
+.reveal.in{opacity:1;transform:none}

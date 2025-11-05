@@ -1,235 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MultiZeno Privacy Policy - Learn how we handle your data and protect your privacy.">
-    <meta name="keywords" content="MultiZeno, privacy policy, Discord bot, data protection">
-    <meta name="author" content="MR. VG">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="MultiZeno Privacy Policy">
-    <meta property="og:description" content="Learn how MultiZeno handles your data and protects your privacy.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://multizeno.xyz/img/logo.png">
-    <meta property="og:url" content="https://multizeno.xyz/privacy.html">
-    <title>MultiZeno - Privacy Policy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://multizeno.xyz/img/icon.ico" type="image/x-icon">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1e3a8a, #7c3aed);
-            color: #e5e7eb;
-            overflow-x: hidden;
-        }
-        .navbar {
-            backdrop-filter: blur(12px);
-            background: rgba(17, 24, 39, 0.7);
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #3b82f6, #a855f7);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .legal-container {
-            background: rgba(31, 41, 55, 0.9);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 900px;
-        }
-        .legal-section {
-            margin-bottom: 2.5rem;
-        }
-        .legal-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: #3b82f6;
-        }
-        .legal-subtitle {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin: 1.2rem 0 0.8rem 0;
-            color: #a855f7;
-        }
-        .legal-text {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(90deg, #3b82f6, #a855f7);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        .back-to-top:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-        }
-        .discord-btn {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .discord-btn:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-        .discord-btn:hover:after {
-            left: 100%;
-        }
-        @media (max-width: 640px) {
-            .legal-container {
-                padding: 1.5rem;
-                margin: 1rem;
-            }
-            .legal-title {
-                font-size: 1.5rem;
-            }
-            .legal-subtitle {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MultiZeno • Privacy Policy</title>
+<meta name="description" content="MultiZeno Privacy Policy — how we handle your data and protect your privacy.">
+<link rel="canonical" href="https://multizeno.xyz/privacy.html">
+<meta name="theme-color" content="#3b82f6">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="MultiZeno • Privacy Policy">
+<meta property="og:description" content="Learn how MultiZeno handles data and protects your privacy.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://multizeno.xyz/img/logo.png">
+<meta property="og:url" content="https://multizeno.xyz/privacy.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/global.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"Privacy Policy",
+  "url":"https://multizeno.xyz/privacy.html",
+  "about":{"@type":"SoftwareApplication","name":"MultiZeno"},
+  "publisher":{"@type":"Organization","name":"MR. VG"}
+}
+</script>
 </head>
-<body class="min-h-screen flex flex-col">
-    <nav class="navbar w-full py-4 px-4 sm:px-6 fixed top-0 z-20">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
-            <a href="https://multizeno.xyz" class="text-2xl sm:text-3xl font-bold gradient-text">MultiZeno</a>
-            <div class="flex flex-wrap gap-4 sm:gap-6 items-center mt-2 sm:mt-0">
-                <a href="https://multizeno.xyz" class="text-gray-200 hover:text-blue-400 transition">Home</a>
-                <a href="https://multizeno.xyz/privacy.html" class="text-gray-200 hover:text-blue-400 transition">Privacy Policy</a>
-                <a href="https://multizeno.xyz/terms.html" class="text-gray-200 hover:text-blue-400 transition">Terms of Service</a>
-                <a href="https://top.gg/bot/1183958042153332826" target="_blank" class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-full hover:from-blue-600 hover:to-purple-600 transition discord-btn">Vote</a>
-            </div>
-        </div>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="/">MultiZeno</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/privacy.html" aria-current="page">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a class="btn btn-primary" href="https://top.gg/bot/1183958042153332826" target="_blank" rel="nofollow noopener">Vote</a>
     </nav>
+  </div>
+</header>
 
-    <div class="pt-24 pb-16 px-4">
-        <div class="legal-container">
-            <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 gradient-text">Privacy Policy</h1>
-            <p class="legal-text text-center">Last Updated: August 2025</p>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">1. Information We Collect</h2>
-                <p class="legal-text">MultiZeno does not intentionally collect or store personal information. The bot may temporarily process the following data to provide functionality:</p>
-                <ul class="list-disc pl-6 mb-4">
-                    <li class="legal-text">Server IDs for configuration storage</li>
-                    <li class="legal-text">User IDs for command functionality</li>
-                    <li class="legal-text">Message content when commands are executed</li>
-                </ul>
-            </div>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">2. How We Use Information</h2>
-                <p class="legal-text">Any data processed by MultiZeno is used solely for the purpose of providing the bot's functionality. This includes:</p>
-                <ul class="list-disc pl-6 mb-4">
-                    <li class="legal-text">Responding to commands</li>
-                    <li class="legal-text">Storing server-specific settings</li>
-                    <li class="legal-text">Providing moderation features</li>
-                </ul>
-            </div>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">3. Data Storage</h2>
-                <p class="legal-text">MultiZeno does not permanently store personal data. Server configurations and settings are stored only as long as necessary to provide the service. No message content is stored beyond the immediate processing required for command execution.</p>
-            </div>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">4. Data Sharing</h2>
-                <p class="legal-text">We do not share any data with third parties. All information processed by MultiZeno remains confidential and is used exclusively for the bot's functionality.</p>
-            </div>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">5. Your Rights</h2>
-                <p class="legal-text">You have the right to:</p>
-                <ul class="list-disc pl-6 mb-4">
-                    <li class="legal-text">Request information about what data is stored for your server</li>
-                    <li class="legal-text">Request deletion of your server's configuration data</li>
-                    <li class="legal-text">Opt out of data processing by removing MultiZeno from your server</li>
-                </ul>
-            </div>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">6. Security</h2>
-                <p class="legal-text">We implement appropriate technical measures to protect any data processed by MultiZeno. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
-            </div>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">7. Children's Privacy</h2>
-                <p class="legal-text">MultiZeno is not directed at individuals under the age of 13. We do not knowingly collect personal information from children under 13.</p>
-            </div>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">8. Changes to This Policy</h2>
-                <p class="legal-text">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-            </div>
-            
-            <div class="legal-section">
-                <h2 class="legal-title">9. Contact Us</h2>
-                <p class="legal-text">If you have any questions about this Privacy Policy, please contact us on Discord: <span class="font-semibold">mr.vg</span> or join our support server: <a href="https://discord.gg/pcxQ4juQdG" class="text-blue-400 hover:underline" target="_blank">https://discord.gg/pcxQ4juQdG</a></p>
-            </div>
-        </div>
+<main class="section section-dark" style="padding-top:6.5rem">
+  <div class="container" style="max-width:900px">
+    <h1 style="text-align:center;background:linear-gradient(90deg,#3b82f6,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0 0 1rem;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800">Privacy Policy</h1>
+    <p class="desc" style="text-align:center;margin-bottom:1.5rem">Last updated: August 2025</p>
+
+    <article class="card" style="padding:24px;display:block">
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">1. Information We Collect</h2>
+        <p class="desc">MultiZeno does not intentionally collect or store personal information. The bot may temporarily process the following data to provide functionality:</p>
+        <ul style="margin:.6rem 0 1rem 1.25rem">
+          <li class="desc">Server IDs for configuration storage</li>
+          <li class="desc">User IDs for command functionality</li>
+          <li class="desc">Message content when commands are executed</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">2. How We Use Information</h2>
+        <p class="desc">Any data processed by MultiZeno is used solely for providing the bot’s functionality, including:</p>
+        <ul style="margin:.6rem 0 1rem 1.25rem">
+          <li class="desc">Responding to commands</li>
+          <li class="desc">Storing server-specific settings</li>
+          <li class="desc">Providing moderation features</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">3. Data Storage</h2>
+        <p class="desc">MultiZeno does not permanently store personal data. Server configurations and settings are stored only as long as necessary to provide the service. No message content is stored beyond the immediate processing required for command execution.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">4. Data Sharing</h2>
+        <p class="desc">We do not share data with third parties. All information processed by MultiZeno remains confidential and is used exclusively for the bot’s functionality.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">5. Your Rights</h2>
+        <p class="desc">You can:</p>
+        <ul style="margin:.6rem 0 1rem 1.25rem">
+          <li class="desc">Request information about what data is stored for your server</li>
+          <li class="desc">Request deletion of your server’s configuration data</li>
+          <li class="desc">Opt out of data processing by removing MultiZeno from your server</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">6. Security</h2>
+        <p class="desc">We implement appropriate technical measures to protect any data processed by MultiZeno. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">7. Children’s Privacy</h2>
+        <p class="desc">MultiZeno is not directed at individuals under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">8. Changes to This Policy</h2>
+        <p class="desc">We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-title" style="color:#3b82f6;font-size:1.4rem;font-weight:800;margin:0 0 .75rem">9. Contact Us</h2>
+        <p class="desc">For questions, contact us on Discord: <strong>mr.vg</strong> or join the support server: <a href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener" style="color:#60a5fa;text-decoration:underline">https://discord.gg/pcxQ4juQdG</a></p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>Developed by <strong>MR. VG</strong></div>
+    <div style="margin-top:6px">© 2025 MultiZeno. All rights reserved.</div>
+    <div style="margin-top:10px;display:flex;gap:16px;justify-content:center">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
     </div>
+  </div>
+</footer>
 
-    <footer class="bg-gray-900 py-6 sm:py-8 text-center mt-auto">
-        <p class="text-gray-300">Developed by <span class="font-semibold text-blue-400">MR. VG</span></p>
-        <p class="text-gray-400 mt-2">© 2025 MultiZeno. All rights reserved.</p>
-        <div class="mt-4 flex justify-center gap-6">
-            <a href="https://multizeno.xyz/privacy.html" class="text-gray-400 hover:text-blue-400 transition">Privacy Policy</a>
-            <a href="https://multizeno.xyz/terms.html" class="text-gray-400 hover:text-blue-400 transition">Terms of Service</a>
-        </div>
-    </footer>
+<button id="toTop" class="btn btn-primary" style="position:fixed;right:18px;bottom:18px;width:48px;height:48px;padding:0;border-radius:999px;display:none">↑</button>
 
-    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        ↑
-    </div>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            const backToTopButton = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'flex';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+<script>
+const toTop=document.getElementById("toTop");
+window.addEventListener("scroll",()=>{toTop.style.display=window.scrollY>300?"inline-flex":"none";});
+toTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+</script>
 </body>
 </html>
