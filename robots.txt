@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 
 Sitemap: https://multizeno.xyz/sitemap.xml
+=======
+User-agent: *
+Allow: /
+
+Sitemap: https://multizenobot.pages.dev/sitemap.xml
+>>>>>>> 35464f9b25a6ea04bb45482c8508fe46baad77d6
