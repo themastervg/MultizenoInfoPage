@@ -1,49 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MultiZeno • Multipurpose Discord Bot</title>
-<meta name="description" content="MultiZeno is a modern multipurpose Discord bot with powerful moderation, games, and utilities. Add it to supercharge your server.">
-<link rel="canonical" href="https://multizeno.xyz/">
-<meta name="theme-color" content="#3b82f6">
-<meta property="og:title" content="MultiZeno • Multipurpose Discord Bot">
-<meta property="og:description" content="Moderation, games, utilities, and more with a sleek interface.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://multizeno.xyz/img/logo.png">
-<meta property="og:url" content="https://multizeno.xyz/">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"SoftwareApplication",
-  "name":"MultiZeno",
-  "applicationCategory":"SocialNetworkingApplication",
-  "operatingSystem":"All",
-  "creator":{"@type":"Organization","name":"MR. VG"},
-  "url":"https://multizeno.xyz/",
-  "image":"https://multizeno.xyz/img/logo.png",
-  "description":"Multipurpose Discord bot with moderation, fun and utility commands.",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-}
-</script>
-<link rel="stylesheet" href="/assets/global.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MultiZeno • Power Up Your Discord</title>
+  <meta name="description" content="MultiZeno is a multipurpose Discord bot with moderation, utility, games, and advanced features for your server.">
+  <link rel="icon" href="/favicon-32x32.png">
+  <link rel="stylesheet" href="/assets/global.css">
 </head>
 <body>
 <header class="navbar">
   <div class="container nav-inner">
     <a class="brand" href="/">MultiZeno</a>
-    <nav class="nav-links" aria-label="Primary">
+    <nav class="nav-links">
       <a href="/">Home</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
-      <a class="btn btn-primary" href="https://top.gg/bot/1183958042153332826" target="_blank" rel="nofollow noopener">Vote</a>
+      <a class="btn btn-primary" target="_blank" href="https://top.gg/bot/1183958042153332826">Vote</a>
     </nav>
   </div>
 </header>
@@ -51,11 +24,11 @@
 <section class="hero container">
   <div class="reveal in">
     <h1>Power Up Your Discord</h1>
-    <p>A fast, multipurpose bot for moderation, fun games, and everyday utilities. Beautiful UI, smart features, and constant updates.</p>
+    <p>A multipurpose Discord bot built for moderation, automation, fun games, utility commands, and more.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank" rel="nofollow noopener">Add to Discord</a>
-      <a class="btn btn-outline" href="#commands">Explore Commands <span class="kbd">/help</span></a>
-      <a class="btn btn-ghost" href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener">Support Server</a>
+      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank">Add to Discord</a>
+      <a class="btn btn-outline" href="#commands">Explore Commands</a>
+      <a class="btn btn-ghost" href="https://discord.gg/pcxQ4juQdG" target="_blank">Support Server</a>
     </div>
   </div>
 </section>
@@ -63,17 +36,18 @@
 <section id="commands" class="section section-dark">
   <div class="container">
     <h2>Command Center</h2>
-    <div class="tabs" role="tablist" aria-label="Categories">
-    <button class="tab" role="tab" aria-selected="false" data-cat="All">All</button>
-    <button class="tab" role="tab" aria-selected="true" data-cat="Community">Community</button>
-    <button class="tab" role="tab" aria-selected="false" data-cat="Moderation">Moderation</button>
+    <div class="tabs">
+      <button class="tab" aria-selected="false" data-cat="Community">Community</button>
+      <button class="tab" aria-selected="false" data-cat="Moderation">Moderation</button>
+      <button class="tab" aria-selected="true" data-cat="All">All</button>
     </div>
     <div class="toolbar">
-      <div class="search" role="search">
-        <input id="search" type="search" placeholder="Search commands… e.g. poll, avatar, ban" autocomplete="off" aria-label="Search commands">
+      <div class="search">
+        <input type="text" id="search" placeholder="Search commands...">
       </div>
-      <span class="badge" id="count">0 commands</span>
+      <span id="count" class="badge">0 commands</span>
     </div>
+    <div id="loader" class="loader"></div>
     <div id="grid" class="grid"></div>
   </div>
 </section>
@@ -81,10 +55,12 @@
 <section id="about" class="section">
   <div class="container">
     <h2>About MultiZeno</h2>
-    <p style="text-align:center;max-width:860px;margin:0 auto 10px;color:#c7ccd6">Built by MR. VG for communities that want reliable tools and playful features in one bot. MultiZeno combines robust moderation with quick utilities and mini-games.</p>
-    <div class="hero-actions" style="margin-top:10px">
-      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank" rel="nofollow noopener">Add to Discord</a>
-      <a class="btn btn-ghost" href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener">Join Support</a>
+    <p class="desc" style="text-align:center;max-width:700px;margin:0 auto;">
+      Developed by <strong>MR. VG</strong>, MultiZeno is designed to enhance Discord communities with powerful moderation, fun features, and smooth performance.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1183958042153332826" target="_blank">Add to Discord</a>
+      <a class="btn btn-ghost" href="https://discord.gg/pcxQ4juQdG" target="_blank">Support Server</a>
     </div>
   </div>
 </section>
@@ -92,111 +68,14 @@
 <footer class="footer">
   <div class="container">
     <div>Developed by <strong>MR. VG</strong></div>
-    <div style="margin-top:6px">© 2025 MultiZeno. All rights reserved.</div>
-    <div style="margin-top:10px;display:flex;gap:16px;justify-content:center">
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms of Service</a>
-    </div>
+    <div style="margin-top:6px;">© 2025 MultiZeno. All rights reserved.</div>
   </div>
 </footer>
 
-<script>
-const commands = [
-  {cat:"Community",cmd:"/8ball",desc:"Ask the Magic 8-Ball a question"},
-  {cat:"Community",cmd:"/avatar",desc:"Get a user's avatar"},
-  {cat:"Community",cmd:"/calculator",desc:"Open a stylish interactive calculator"},
-  {cat:"Community",cmd:"/coinflip",desc:"Flip a coin and get heads or tails"},
-  {cat:"Community",cmd:"/help",desc:"List all available commands with categories"},
-  {cat:"Community",cmd:"/invites",desc:"Invite management system"},
-  {cat:"Community",cmd:"/membercount",desc:"Show server member statistics"},
-  {cat:"Community",cmd:"/permissions",desc:"Check a user's permissions in this server"},
-  {cat:"Community",cmd:"/randomfact",desc:"Get a random interesting fact in English and Hindi"},
-  {cat:"Community",cmd:"/rick-roll",desc:"Rick-Roll a member"},
-  {cat:"Community",cmd:"/rock-paper",desc:"Play rock-paper-scissors with a friend"},
-  {cat:"Community",cmd:"/roll",desc:"Roll dice (e.g., 2d6 for two 6-sided dice)"},
-  {cat:"Community",cmd:"/serverinfo",desc:"Displays information about the server"},
-  {cat:"Community",cmd:"/stats",desc:"Check bot stats"},
-  {cat:"Community",cmd:"/tic-tac-toe",desc:"Play a game of Tic Tac Toe on Discord"},
-  {cat:"Community",cmd:"/trivia",desc:"Starts a trivia game"},
-  {cat:"Community",cmd:"/fast-typing-test",desc:"Starts a fast-type challenge"},
-  {cat:"Community",cmd:"/userinfo",desc:"Get information about a user"},
-  {cat:"Community",cmd:"/vote",desc:"Vote for our bot on Top.gg to support us! ❤"},
-  {cat:"Community",cmd:"/vouch",desc:"Manage the server-specific vouch system"},
-  {cat:"Community",cmd:"/wiki",desc:"Search Wikipedia for information"},
-  {cat:"Moderation",cmd:"/addrole",desc:"Add a role to a user"},
-  {cat:"Moderation",cmd:"/automod",desc:"Configure comprehensive auto-moderation settings"},
-  {cat:"Moderation",cmd:"/ban",desc:"Ban a member from this guild"},
-  {cat:"Moderation",cmd:"/create-embed",desc:"Build an embed with buttons and modals"},
-  {cat:"Moderation",cmd:"/custom",desc:"Manage and use custom commands"},
-  {cat:"Moderation",cmd:"/dm",desc:"Send a direct message to a user"},
-  {cat:"Moderation",cmd:"/emoji-steal",desc:"Add an emoji to this server"},
-  {cat:"Moderation",cmd:"/kick",desc:"Kick a member"},
-  {cat:"Moderation",cmd:"/lock",desc:"Lock a channel"},
-  {cat:"Moderation",cmd:"/nick",desc:"Change a user’s nickname"},
-  {cat:"Moderation",cmd:"/poll",desc:"Create a poll with up to 5 options"},
-  {cat:"Moderation",cmd:"/purge",desc:"Purge messages in this channel with various options"},
-  {cat:"Moderation",cmd:"/removerole",desc:"Remove a role from a user"},
-  {cat:"Moderation",cmd:"/say",desc:"Send a message through the bot with advanced options"},
-  {cat:"Moderation",cmd:"/slowmode",desc:"Sets slowmode for the current channel"},
-  {cat:"Moderation",cmd:"/timeout",desc:"Timeout a user"},
-  {cat:"Moderation",cmd:"/unban",desc:"Unban a user from this guild"},
-  {cat:"Moderation",cmd:"/unlock",desc:"Unlock a channel"},
-  {cat:"Moderation",cmd:"/welcome",desc:"Manage welcome messages and settings"}
-];
+<button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">☀</button>
+<a href="https://discord.gg/pcxQ4juQdG" target="_blank" rel="nofollow noopener" class="support-btn" aria-label="Join support server">💬</a>
 
-const grid = document.getElementById("grid");
-const count = document.getElementById("count");
-const tabs = document.querySelectorAll(".tab");
-const search = document.getElementById("search");
-
-let activeCat = "Community";
-let term = "";
-
-function render(){
-  const list = commands.filter(x => (activeCat==="All"||x.cat===activeCat) && (x.cmd.toLowerCase().includes(term)||x.desc.toLowerCase().includes(term)));
-  count.textContent = list.length + " commands";
-  grid.innerHTML = list.map(x => `
-    <div class="card reveal">
-      <div>
-        <div class="badge">${x.cat}</div>
-        <div class="cmd" style="margin-top:6px">${x.cmd}</div>
-        <div class="desc" style="margin-top:4px">${x.desc}</div>
-      </div>
-      <div class="copy">
-        <button aria-label="Copy ${x.cmd}" data-copy="${x.cmd}">Copy</button>
-      </div>
-    </div>
-  `).join("");
-  observe();
-}
-tabs.forEach(t=>{
-  t.addEventListener("click",()=>{
-    tabs.forEach(b=>b.setAttribute("aria-selected","false"));
-    t.setAttribute("aria-selected","true");
-    activeCat = t.dataset.cat;
-    render();
-  });
-});
-search.addEventListener("input", e=>{
-  term = e.target.value.trim().toLowerCase();
-  render();
-});
-document.addEventListener("click", e=>{
-  const btn = e.target.closest("button[data-copy]");
-  if(!btn) return;
-  const text = btn.getAttribute("data-copy");
-  navigator.clipboard.writeText(text);
-  btn.textContent = "Copied";
-  setTimeout(()=>btn.textContent="Copy",900);
-});
-
-function observe(){
-  const els = document.querySelectorAll(".reveal");
-  const io = new IntersectionObserver((entries)=>entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}}),{threshold:.15});
-  els.forEach(el=>io.observe(el));
-}
-
-render();
-</script>
+<script src="/assets/theme.js"></script>
+<script src="/assets/commands.js"></script>
 </body>
 </html>
